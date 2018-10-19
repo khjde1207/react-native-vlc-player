@@ -31,8 +31,10 @@ Run `npm i -S https://github.com/wfilleman/react-native-vlc-player.git`
   `new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android/vlc')`
   
   add
+  
   `
-   include ':libvlc'
+  
+  include ':libvlc'
   
   project(':libvlc').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android/libvlc')
   
