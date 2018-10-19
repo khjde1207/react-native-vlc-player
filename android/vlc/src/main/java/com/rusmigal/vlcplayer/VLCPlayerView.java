@@ -124,7 +124,9 @@ public class VLCPlayerView extends FrameLayout
         for (int i = 0; i < initOptions.size(); i++) {
             options.add(initOptions.get(i).toString());
         }
-
+        LibVLC  libvlc = new LibVLC(this.mThemedReactContext,options); 
+        videoView.setLibVLC(libvlc);
+        
         Uri uri = Uri.parse(filePath);
         String path = uri.toString();
         videoView.setPath(path);
