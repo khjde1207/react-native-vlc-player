@@ -48,8 +48,8 @@ project(':react-native-vlc-player').projectDir = new File(rootProject.projectDir
   project(':libvlc').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android/libvlc')
   
   ```
-  
-- in *MainApplication.java* you need to import `com.rusmigal.vlcplayer.VLCPlayerPackage` instead of 
+- in *MainActivity.java* remove `import com.rusmigal.vlcplayer.VLCPlayerPackage`
+- in *MainApplication.java* add --
 ```
 import com.vlcplayer.VLCPlayerPackage;
 ..
