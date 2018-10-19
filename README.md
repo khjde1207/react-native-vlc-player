@@ -157,5 +157,5 @@ this.refs['vlcplayer'].snapshot(path);
 
 2. readme 에 설명이 부족하여 동작 하기 까지 삽질이 너무 길어졌음.
 
-3. android 버전을 메인 프로젝트 버전에 따라가도록 수정  - 참고 : https://github.com/react-native-community/react-native-svg
+3. android 버전을 메인 프로젝트 버전에 따라가도록 수정  - 참고 : https://github.com/react-native-community/react-native-svg/blob/master/android/build.gradle
 
