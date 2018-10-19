@@ -49,7 +49,22 @@ project(':react-native-vlc-player').projectDir = new File(rootProject.projectDir
   
   ```
   
-- in *MainApplication.java* you need to import `com.rusmigal.vlcplayer.VLCPlayerPackage` instead of `com.vlcplayer.VLCPlayerPackage`
+- in *MainApplication.java* you need to import `com.rusmigal.vlcplayer.VLCPlayerPackage` instead of 
+```
+import com.vlcplayer.VLCPlayerPackage;
+..
+..
+
+ @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(),
+        +  new VLCPlayerPackage()
+      );
+    }
+
+```
+
 
  android/app/build.gradle 
  
