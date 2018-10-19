@@ -145,3 +145,15 @@ this.refs['vlcplayer'].seek(0.333);
 ```
 this.refs['vlcplayer'].snapshot(path);
 ```
+
+
+이 밑으로 는 한글로 : 
+
+해당 저장소의 존재 이유  :
+
+1. 기존 저장소에선 옵션  설정 은 있지만 동작 하지 않는 버그가 있음,
+
+2. readme 에 설명이 부족하여 동작 하기 까지 삽질이 너무 길어졌음.
+
+3. android 버전을 메인 프로젝트 버전에 따라가도록 수정  - 참고 : https://github.com/react-native-community/react-native-svg
+
