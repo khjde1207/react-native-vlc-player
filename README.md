@@ -51,7 +51,7 @@ project(':react-native-vlc-player').projectDir = new File(rootProject.projectDir
 - in *MainActivity.java* remove `import com.rusmigal.vlcplayer.VLCPlayerPackage`
 - in *MainApplication.java* add --
 ```
-import com.vlcplayer.VLCPlayerPackage;
+import com.rusmigal.vlcplayer.VLCPlayerPackage;
 ..
 ..
 
