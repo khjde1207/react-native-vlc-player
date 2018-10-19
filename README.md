@@ -22,7 +22,14 @@ Run `npm i -S https://github.com/wfilleman/react-native-vlc-player.git`
 
 - in settings.gradle change:
 
-  `new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android')`
+  `new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android')
+  
+  
+  include ':libvlc'
+  project(':libvlc').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android/libvlc')
+  
+  `
+  
 
   to
 
@@ -30,20 +37,47 @@ Run `npm i -S https://github.com/wfilleman/react-native-vlc-player.git`
 - in *MainApplication.java* you need to import `com.rusmigal.vlcplayer.VLCPlayerPackage` instead of `com.vlcplayer.VLCPlayerPackage`
 
 ## Usage
+ 
 
 ```
-<VLCPlayer
-    ref='vlcplayer'
-    paused={this.state.paused}
-    style={styles.vlcplayer}
-    source={{uri: this.props.uri, initOptions: ['--codec=avcodec']}}
-    onVLCProgress={this.onProgress.bind(this)}
-    onVLCEnded={this.onEnded.bind(this)}
-    onVLCStopped={this.onEnded.bind(this)}
-    onVLCPlaying={this.onPlaying.bind(this)}
-    onVLCBuffering={this.onBuffering.bind(this)}
-    onVLCPaused={this.onPaused.bind(this)}
- />
+state = {paused : false, uri : ""}
+constructor(props) {
+    super(props); 
+    this.state.uri = "rtsp://...."
+    
+}
+onProgress(){
+
+}
+onEnded(){
+
+}
+onPlaying(){
+
+}
+onPaused(){
+
+}
+onBuffering(){
+
+}
+render() {
+    if(this.state.uri == ""){
+      return (<View></View>)
+    }
+    <VLCPlayer
+        ref='vlcplayer'
+        paused={this.state.paused}
+        style={styles.vlcplayer}
+        source={{uri: this.state.uri, initOptions: ['--codec=avcodec',"--rtsp-tcp"] , "autoplay":true}}
+        onVLCProgress={this.onProgress.bind(this)}
+        onVLCEnded={this.onEnded.bind(this)}
+        onVLCStopped={this.onEnded.bind(this)}
+        onVLCPlaying={this.onPlaying.bind(this)}
+        onVLCBuffering={this.onBuffering.bind(this)}
+        onVLCPaused={this.onPaused.bind(this)}
+     />
+ }
 
 ```
 ### Properties
