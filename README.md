@@ -8,7 +8,7 @@ Updated for iOS 12, Android 6.0+ using the latest VLCKit 3.x
 
 ### Add it to your project
 
-Run `npm i -S https://github.com/wfilleman/react-native-vlc-player.git`
+Run `npm i -S https://github.com/khjde1207/react-native-vlc-player.git`
 
 #### iOS
 
