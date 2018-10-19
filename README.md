@@ -22,13 +22,19 @@ Run `npm i -S https://github.com/wfilleman/react-native-vlc-player.git`
 
 - in settings.gradle change:
 
-  `new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android')
-  `
+  ```
+  include ':react-native-vlc-player'
+project(':react-native-vlc-player').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android')
+
+  ```
   
 
   to
 
-  `new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android/vlc')`
+  ```
+  include ':react-native-vlc-player'
+  project(':react-native-vlc-player').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android/vlc')
+  ```
   
   
   
