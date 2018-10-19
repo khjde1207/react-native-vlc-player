@@ -23,17 +23,21 @@ Run `npm i -S https://github.com/wfilleman/react-native-vlc-player.git`
 - in settings.gradle change:
 
   `new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android')
-  
-  
-  include ':libvlc'
-  
-  project(':libvlc').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android/libvlc')
   `
   
 
   to
 
   `new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android/vlc')`
+  
+  add
+  `
+   include ':libvlc'
+  
+  project(':libvlc').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vlc-player/android/libvlc')
+  
+  `
+  
 - in *MainApplication.java* you need to import `com.rusmigal.vlcplayer.VLCPlayerPackage` instead of `com.vlcplayer.VLCPlayerPackage`
 
 ## Usage
