@@ -105,7 +105,7 @@ public class VLCPlayerView extends FrameLayout
     private void init() {
         inflate(getContext(), R.layout.player, this);
         videoView = (MyVideoView) findViewById(R.id.vlc_surface);
-        videoView.setMediaListenerEvent(this);
+        //videoView.setMediaListenerEvent(this);
     }
 
     private void setMedia(String filePath) {
@@ -126,6 +126,8 @@ public class VLCPlayerView extends FrameLayout
         }
         LibVLC  libvlc = new LibVLC(this.mThemedReactContext,options); 
         videoView.setLibVLC(libvlc);
+        
+        videoView.setMediaListenerEvent(this);
         
         Uri uri = Uri.parse(filePath);
         String path = uri.toString();
